@@ -1,0 +1,15 @@
+[Unit]
+Description=Discord FAQ bot (Ba Mon) - tra loi cau hoi thuong gap
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=dogtor
+WorkingDirectory=/home/dogtor/discord-faq-bot
+ExecStart=/home/dogtor/discord-faq-bot/venv/bin/python /home/dogtor/discord-faq-bot/bot.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
